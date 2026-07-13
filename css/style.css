@@ -1448,4 +1448,22 @@ img {
 .portfolio .portfolio-simple h3{
     font-size:24px;
   }
+  .portfolio .portfolio-simple .slide-wrap{
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+  }
+
+  .portfolio .portfolio-simple .slide-wrap .portfolio-slide,
+  .portfolio .portfolio-simple .slide-wrap .slick-list,
+  .portfolio .portfolio-simple .slide-wrap .slick-track{
+    width:100%;
+  }
+
+  .portfolio .portfolio-simple .slide-wrap .portfolio-slide img{
+    width:100%;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+  }
 }
