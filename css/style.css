@@ -79,8 +79,11 @@ img {
 }
 
 .inner {
-  width: 1360px;
+  max-width: 1360px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
   /* background: rgba(0, 0, 0, 0.03); */
 }
 
@@ -1244,3 +1247,24 @@ img {
   font-size: 20px;
   font-family: 'Colombo';
 } */
+/* =========================
+   Tablet (1024px)
+========================= */
+@media screen and (max-width: 1024px) {
+
+  .inner {
+    padding: 0 30px;
+  }
+
+}
+
+/* =========================
+   Mobile (390px)
+========================= */
+@media screen and (max-width: 390px) {
+
+  .inner {
+    padding: 0 16px;
+  }
+
+}
