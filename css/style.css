@@ -1268,3 +1268,57 @@ img {
   }
 
 }
+/* ===========================
+   MOBILE 390px
+=========================== */
+@media screen and (max-width:390px){
+
+  /* 헤더 */
+  #header{
+    height:70px;
+  }
+
+  #header nav{
+    height:70px;
+  }
+
+  #header nav .gnb{
+    display:none;
+  }
+
+  /* 메인 */
+  .visual{
+    height:100vh;
+    background-position:center;
+  }
+
+  .visual .visual-title{
+    width:100%;
+    top:28%;
+    left:50%;
+    transform:translateX(-50%);
+    padding:0 20px;
+  }
+
+  .visual .visual-title p{
+    margin:0;
+    text-align:center;
+    font-size:16px;
+  }
+
+  .visual .visual-title h2{
+    margin:0;
+    font-size:70px;
+    line-height:0.9;
+  }
+
+  .visual .visual-title strong{
+    font-size:16px;
+  }
+
+  .visual span{
+    bottom:30px;
+    top:auto;
+  }
+
+}
