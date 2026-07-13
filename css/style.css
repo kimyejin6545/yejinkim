@@ -1445,5 +1445,7 @@ img {
 .slide-wrap .slick-arrow{
     display:none !important;
   }
-
+.portfolio .portfolio-simple h3{
+    font-size:24px;
+  }
 }
