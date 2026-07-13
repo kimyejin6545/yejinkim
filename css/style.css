@@ -1426,4 +1426,24 @@ img {
     justify-content:center;
     gap:15px;
 }
+/* portfolio simple mobile */
+
+.portfolio .portfolio-simple{
+  height:auto;
+  padding-bottom:80px;
+}
+
+.portfolio .portfolio-simple .slide-wrap{
+  width:100%;
+  margin:40px auto;
+}
+
+.portfolio .portfolio-simple .slide-wrap .portfolio-slide img{
+  width:100%;
+  height:auto;
+}
+.slide-wrap .slick-arrow{
+    display:none !important;
+  }
+
 }
