@@ -1399,4 +1399,31 @@ img {
  width:100%;
  height:auto;
 }
+.about-me .about-title .about-title-02 section{
+    width:100%;
+    margin-bottom:40px;
+}
+
+.about-me .about-title .about-title-02 section ul{
+    width:100%;
+    font-size:16px;
+    word-break:keep-all;
+}
+
+.about-me .about-title .about-title-02 section:nth-child(4) ul{
+    width:100%;
+    height:auto;
+}
+  
+  .about-me .about-title .about-title-01 div{
+  flex-direction:column;
+  align-items:center;
+  gap:5px;
+
+}
+.about-me .about-title .about-title-02 section:nth-child(4) ul{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
 }
