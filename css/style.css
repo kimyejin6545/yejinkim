@@ -1320,5 +1320,34 @@ img {
     bottom:30px;
     top:auto;
   }
+ .about-inner{
+    padding:0 16px;
+  }
 
+  .about-wrap{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .about-img{
+    width:100%;
+  }
+
+  .about-img img{
+    width:100%;
+    height:auto;
+  }
+
+  .about-text{
+    width:100%;
+  }
+
+  .about-title{
+    font-size:32px;
+  }
+
+  .about-desc{
+    font-size:14px;
+    line-height:1.6;
+  }
 }
