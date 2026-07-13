@@ -1,0 +1,361 @@
+@charset 'utf-8';
+
+/* 영어 포인트 폰트 Post No Bills Colombo는 들어갈부분에 개별적으로 명령줘야해fw,fz,ff */
+@font-face {
+  font-family: "Colombo";
+  src: url("../fonts/PostNoBillsColombo-Medium.woff2") format("woff2"),
+    url("../fonts/PostNoBillsColombo-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Colombo";
+  src: url("../fonts/PostNoBillsColombo-Bold.woff2") format("woff2"),
+    url("../fonts/PostNoBillsColombo-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Colombo";
+  src: url("../fonts/PostNoBillsColombo-ExtraBold.woff2") format("woff2"),
+    url("../fonts/PostNoBillsColombo-ExtraBold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 영어기본폰트 ABeeZee */
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+/* 한글기본폰트 나눔 스퀘어 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
+
+:root {
+  font-size: 62.5%;
+  /*10px*/
+  --txt1-color: #585858;
+  --txt2-color: #828282;
+  --base1-color: #efe2d9;
+  --base2-color: #e9c7b0;
+  --point-color: #b174be;
+  scroll-behavior: smooth;
+  /* 링크의 부드러운 이동 */
+}
+
+::selection {
+  background: var(--point-color);
+}
+
+body {
+  font: 1.8rem/1.5 "ABeeZee", "NanumSquare", sans-serif;
+  color: #000;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--point-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+  width: 1360px;
+  margin: 0 auto;
+}
+
+/* loadin화면 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--base2-color);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* 마우스 */
+.cursor {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #9e806cd2;
+  pointer-events: none;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+  z-index: 100;
+}
+
+.cursor.active {
+  animation: cursor-action 0.7s;
+}
+
+.follower {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.623);
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  z-index: 100;
+  /* 마우스스타일에 가려서 버튼이 안눌릴때 */
+  pointer-events: none;
+  user-select: none;
+}
+
+.follower.active {
+  animation: follower-action 0.4s;
+}
+
+@keyframes follower-action {
+  100% {
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+  }
+}
+
+@keyframes cursor-action {
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+
+/* s:more구경하기 */
+.container2 {
+  /* background: url(../img/more/back2-2.jpg) no-repeat 0 0 / cover fixed; */
+  background: #000;
+}
+
+.container2 .backtopeep {
+  padding-top: 60px;
+  padding-left: 75px;
+}
+
+.container2 h2 {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 150px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Colombo";
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  margin: 18px auto 45px auto;
+}
+
+.tab-menu {
+  display: flex;
+  /* justify-content: space-around; */
+  /* width: 602px; */
+  border-bottom: 1px solid #fff;
+  /* gap: 35px; */
+}
+
+.tab-menu a {
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  padding: 5px 33px;
+}
+
+.tab-menu a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid #fff;
+}
+
+.tab-menu a.on {
+  border-bottom: 3px solid #fff;
+}
+
+.tab-contents {
+  width: 1782px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.tab-contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+.tab-contents figure {
+  width: 581px;
+  height: 327px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.tab-contents figure img {
+  width: 100%;
+}
+
+.tab-contents figure dl {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  column-gap: 20px;
+  padding: 10px;
+}
+
+.tab-contents figure dl dt {
+  font-size: 20px;
+  font-weight: 700;
+  /* flex-basis: 100%; */
+  width: 100%;
+}
+
+.tab-contents figure dl dd {
+  font-size: 13px;
+  display: block;
+}
+
+/* UI/UX디자인 구별 */
+.tab-contents div:nth-child(4) figure dl dt a {
+  color: #e06afb;
+}
+.tab-contents div:nth-child(4) figure img {
+  height: 100%;
+}
+.tab-contents div:nth-child(4) figure dl {
+  opacity: 1;
+}
+/* 호버됬을때 */
+
+.tab-contents figure:hover dl {
+  opacity: 1;
+}
+
+.tab-contents figure:hover {
+  transform: scale(1.15);
+  z-index: 100;
+}
+
+/* e:more구경하기 */
+/* html에서 AOS css애니메이션 */
+@keyframes myAni {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="myAni"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+[data-aos="myAni"].aos-animate {
+  animation: myAni 1s both;
+}
