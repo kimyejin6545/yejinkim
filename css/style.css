@@ -1258,16 +1258,6 @@ img {
 
 }
 
-/* =========================
-   Mobile (390px)
-========================= */
-@media screen and (max-width: 390px) {
-
-  .inner {
-    padding: 0 16px;
-  }
-
-}
 /* ===========================
    MOBILE 390px
 =========================== */
@@ -1349,5 +1339,35 @@ img {
   .about-desc{
     font-size:14px;
     line-height:1.6;
+  }
+  .inner {
+    padding: 0 16px;
+  }
+  .about-me .about-title{
+    flex-direction:column;
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+  .about-me .about-title .about-title-01{
+    width:100%;
+    padding-left:0;
+    text-align:center;
+  }
+  @media screen and (max-width:390px){
+
+  .about-me .about-title .about-title-01 figure{
+    width:247px;
+    height:319px;
+    margin:25px auto 0;
+  }
+
+}
+.about-me .about-title .about-title-02{
+    width:100%;
+    display:block;
+  }
+  .about-me .about-title .about-title-02 section{
+    width:100%;
+    margin-bottom:35px;
   }
 }
