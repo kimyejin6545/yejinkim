@@ -1307,9 +1307,9 @@ img {
   }
 
   .visual .visual-title h2{
-    margin:0;
-    font-size:70px;
-    line-height:0.9;
+     margin:0;
+  font-size:clamp(40px, 15vw, 70px);
+  line-height:0.9;
   }
 
   .visual .visual-title strong{
